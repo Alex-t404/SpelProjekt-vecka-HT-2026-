@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1084748023702035792
+--- !u!1 &4593017443374551039
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,10 +8,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2737178295167616886}
-  - component: {fileID: 2551301017850669154}
-  - component: {fileID: 7126789047560605820}
-  - component: {fileID: 4873933542179411797}
+  - component: {fileID: 7776145904488785046}
+  - component: {fileID: 4949146827895059724}
+  - component: {fileID: 4747189670813099620}
+  - component: {fileID: 2962246628508931175}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -19,13 +19,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2737178295167616886
+--- !u!4 &7776145904488785046
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1084748023702035792}
+  m_GameObject: {fileID: 4593017443374551039}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -16.132538, y: 20.649113, z: 17.362164}
@@ -34,19 +34,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2551301017850669154
+--- !u!114 &4949146827895059724
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1084748023702035792}
+  m_GameObject: {fileID: 4593017443374551039}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fc2b6fd2ce3266a4686f412e8b8cfad9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Cameras:
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -63,14 +64,14 @@ MonoBehaviour:
   CoolDownTimer: 1
   CoolDownTime: 1
   CameraSystemUI: {fileID: 0}
-  Power: {fileID: 4873933542179411797}
---- !u!114 &7126789047560605820
+  Power: {fileID: 2962246628508931175}
+--- !u!114 &4747189670813099620
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1084748023702035792}
+  m_GameObject: {fileID: 4593017443374551039}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c8600452506d8bb47b106305afccdaab, type: 3}
@@ -84,13 +85,13 @@ MonoBehaviour:
   WinScreen: {fileID: 0}
   Won: 0
   Animatronics: []
---- !u!114 &4873933542179411797
+--- !u!114 &2962246628508931175
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1084748023702035792}
+  m_GameObject: {fileID: 4593017443374551039}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e36920018b714804eb1458b14e9f08ef, type: 3}
