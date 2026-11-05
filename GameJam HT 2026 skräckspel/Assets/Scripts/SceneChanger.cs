@@ -16,4 +16,11 @@ public class SceneChanger : MonoBehaviour
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex);
     }
+
+    // Laddar Main Menu (antingen via index 0 eller via namn)
+    public void LoadMainMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
+
 }
