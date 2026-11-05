@@ -2,10 +2,18 @@ using UnityEngine;
 
 public class LightController : MonoBehaviour
 {
-    [SerializeField] private Door Door;
+    [SerializeField] private Door door;
 
     private void OnMouseDown()
     {
-        Door.ChangeLights();
+        TriggerClick();
+    }
+
+    public void TriggerClick()
+    {
+        if (door != null)
+        {
+            door.ToggleLight();
+        }
     }
 }

@@ -2,21 +2,18 @@ using UnityEngine;
 
 public class DoorController : MonoBehaviour
 {
-    [SerializeField] private Door Door;
-
-    [SerializeField] private PowerSystem Power;
+    [SerializeField] private Door door;
 
     private void OnMouseDown()
     {
-        Door.IsOpen = !Door.IsOpen;
+        TriggerClick();
+    }
 
-        if (Door.IsOpen)
+    public void TriggerClick()
+    {
+        if (door != null)
         {
-            Power.SystemsOn -= 1;
-        }
-        else
-        {
-            Power.SystemsOn += 1;
+            door.ToggleDoor();
         }
     }
 }
