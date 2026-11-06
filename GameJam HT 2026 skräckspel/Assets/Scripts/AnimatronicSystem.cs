@@ -2,7 +2,7 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class AnimatronicSystem : MonoBehaviour
+public class AnimatronicSystem : MonoBehaviour //Alex B.T
 {
     [SerializeField] private NavMeshAgent NMA;
     [SerializeField] private GameObject[] Targets;

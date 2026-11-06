@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class AmbienceSound : MonoBehaviour
+public class AmbienceSound : MonoBehaviour //Alex B.T
 {
     public Collider Area; //The area of sound 
     public GameObject Player; //The object to follow player 

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class DestinationPoint : MonoBehaviour
+public class DestinationPoint : MonoBehaviour //Alex B.T
 {
     [SerializeField] private int[] points;
 

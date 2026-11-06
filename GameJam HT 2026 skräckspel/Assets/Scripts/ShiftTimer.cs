@@ -1,8 +1,8 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.UIElements; 
 
-public class ShiftTimer : MonoBehaviour
+public class ShiftTimer : MonoBehaviour //Alex B.T
 {
     [SerializeField] private float Timer;
     [SerializeField] private int ShiftEndTime = 6;
