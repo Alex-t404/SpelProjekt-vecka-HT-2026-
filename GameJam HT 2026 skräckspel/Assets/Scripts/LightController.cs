@@ -1,22 +1,4 @@
-//using UnityEngine;
-
-//public class LightController : MonoBehaviour //Alex B.T
-//{
-//    [SerializeField] private Door door;
-
-//    private void OnMouseDown()
-//    {
-//        TriggerClick();
-//    }
-
-//    public void TriggerClick()
-//    {
-//        if (door != null)
-//        {
-//            door.ToggleLight();
-//        }
-//    }
-//}
+//Alex B.T
 using UnityEngine;
 
 public class LightController : MonoBehaviour
@@ -25,7 +7,6 @@ public class LightController : MonoBehaviour
 
     private void OnMouseDown()
     {
-        Debug.Log(gameObject.name);
 
         Door.ChangeLights();
     }
