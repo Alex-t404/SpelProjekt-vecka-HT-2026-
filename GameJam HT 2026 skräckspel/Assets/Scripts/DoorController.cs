@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class DoorController : MonoBehaviour
+public class DoorController : MonoBehaviour //Alex B.T
 {
     [SerializeField] private Door door;
 

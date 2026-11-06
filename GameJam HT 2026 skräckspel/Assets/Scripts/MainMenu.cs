@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement; 
 
-public class MainMenu : MonoBehaviour
+public class MainMenu : MonoBehaviour //Alex B.T
 {
     //Load scene
     public void Play()

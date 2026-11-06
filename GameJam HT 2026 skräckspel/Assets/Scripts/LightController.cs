@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class LightController : MonoBehaviour
+public class LightController : MonoBehaviour //Alex B.T
 {
     [SerializeField] private Door door;
 
