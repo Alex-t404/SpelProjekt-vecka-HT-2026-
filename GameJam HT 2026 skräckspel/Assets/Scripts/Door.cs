@@ -1,90 +1,109 @@
-using UnityEngine; //Alex B.T
+
+using UnityEngine;
 
 public class Door : MonoBehaviour
 {
-    [Header("Lights & Power")]
-    [SerializeField] private GameObject doorLight;
-    [SerializeField] private PowerSystem power;
+    [SerializeField] private GameObject Light;
 
-    [Header("Door Movement Settings")]
-    [SerializeField] private float moveDistanceY = 4f; // Hur långt dörren ska åka upp/ned
-    [SerializeField] private float doorSpeed = 5f;
+    [SerializeField] private Vector3 OpenPos;
+    [SerializeField] private Vector3 ClosePos;
 
-    public bool IsOpen = true;
-    public bool IsLightOn = false;
+    [SerializeField] private float DoorSpeed;
 
-    private Vector3 openPos;
-    private Vector3 closePos;
+    public bool IsOpen;
+    public bool IsOn;
 
+    [SerializeField] private PowerSystem Power;
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        // 1. Sparar dörrens exakta startposition automatiskt från scenen
-        openPos = transform.localPosition;
+        transform.position = OpenPos;
+        IsOpen = true;
 
-        // 2. Beräknar stängd position baserat på Y-skiftet
-        closePos = new Vector3(openPos.x, openPos.y - moveDistanceY, openPos.z);
-
-        // Släck lampan från start
-        if (doorLight != null)
-            doorLight.SetActive(false);
+        ChangeLights();
     }
 
+    // Update is called once per frame
     void Update()
     {
-        // Om strömmen tar slut: Öppna dörren och släck lampan
-        if (power != null && power.Power <= 0)
+        if (Power.Power > 0)
         {
-            if (!IsOpen)
+            if (IsOpen)
             {
-                IsOpen = true;
-                power.SystemsOn = Mathf.Max(0, power.SystemsOn - 1);
+                if (transform.position != OpenPos)
+                {
+                    if (Vector3.Distance(transform.position, OpenPos) <= 0.5f)
+                    {
+                        transform.position = OpenPos;
+                    }
+                    else
+                    {
+                        transform.position = Vector3.Lerp(transform.position, OpenPos, DoorSpeed * Time.deltaTime);
+                    }
+                }
             }
-
-            if (IsLightOn)
+            else
             {
-                IsLightOn = false;
-                if (doorLight != null) doorLight.SetActive(false);
-                power.SystemsOn = Mathf.Max(0, power.SystemsOn - 1);
+                if (transform.position != ClosePos)
+                {
+                    if (Vector3.Distance(transform.position, ClosePos) <= 0.5f)
+                    {
+                        transform.position = ClosePos;
+                    }
+                    else
+                    {
+                        transform.position = Vector3.Lerp(transform.position, ClosePos, DoorSpeed * Time.deltaTime);
+                    }
+                }
+                if (transform.position != ClosePos)
+                {
+                    if (Vector3.Distance(transform.position, ClosePos) <= 0.5f)
+                    {
+                        transform.position = ClosePos;
+                    }
+                    else
+                    {
+                        transform.position = Vector3.Lerp(transform.position, ClosePos, DoorSpeed * Time.deltaTime);
+                    }
+                }
             }
         }
-
-        // Välj målposition beroende på om dörren ska vara öppen eller stängd
-        Vector3 targetPos = IsOpen ? openPos : closePos;
-
-        // Flytta dörren stabilt mot målpositionen utan fysik eller flyttalsproblem
-        transform.localPosition = Vector3.MoveTowards(transform.localPosition, targetPos, doorSpeed * Time.deltaTime);
-    }
-
-    public void ToggleDoor()
-    {
-        if (power != null && power.Power <= 0) return;
-
-        IsOpen = !IsOpen;
-
-        if (power != null)
+        else
         {
-            if (!IsOpen)
-                power.SystemsOn++;
-            else
-                power.SystemsOn = Mathf.Max(0, power.SystemsOn - 1);
+
+            if (transform.position != OpenPos)
+            {
+                if (Vector3.Distance(transform.position, OpenPos) <= 0.5f)
+                {
+                    transform.position = OpenPos;
+                }
+                else
+                {
+                    transform.position = Vector3.Lerp(transform.position, OpenPos, DoorSpeed * Time.deltaTime);
+                }
+            }
+
+            IsOn = true;
+            ChangeLights();
         }
     }
 
-    public void ToggleLight()
+
+    public void ChangeLights()
     {
-        if (power != null && power.Power <= 0) return;
+        IsOn = !IsOn;
 
-        IsLightOn = !IsLightOn;
-
-        if (doorLight != null)
-            doorLight.SetActive(IsLightOn);
-
-        if (power != null)
+        if (IsOn)
         {
-            if (IsLightOn)
-                power.SystemsOn++;
-            else
-                power.SystemsOn = Mathf.Max(0, power.SystemsOn - 1);
+            Light.SetActive(true);
+            Power.SystemsOn += 1;
+        }
+        else
+        {
+            Light.SetActive(false);
+            Power.SystemsOn -= 1;
         }
     }
 }
+

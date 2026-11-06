@@ -1,19 +1,42 @@
+//using UnityEngine;
+
+//public class DoorController : MonoBehaviour //Alex B.T
+//{
+//    [SerializeField] private Door door;
+
+//    private void OnMouseDown()
+//    {
+//        TriggerClick();
+//    }
+
+//    public void TriggerClick()
+//    {
+//        if (door != null)
+//        {
+//            door.ToggleDoor();
+//        }
+//    }
+//}
 using UnityEngine;
 
-public class DoorController : MonoBehaviour //Alex B.T
+public class DoorController : MonoBehaviour
 {
-    [SerializeField] private Door door;
+    [SerializeField] private Door Door;
+
+    [SerializeField] private PowerSystem Power;
 
     private void OnMouseDown()
     {
-        TriggerClick();
-    }
+        
+        Door.IsOpen = !Door.IsOpen;
 
-    public void TriggerClick()
-    {
-        if (door != null)
+        if (Door.IsOpen)
         {
-            door.ToggleDoor();
+            Power.SystemsOn -= 1;
+        }
+        else
+        {
+            Power.SystemsOn += 1;
         }
     }
 }
