@@ -18,7 +18,7 @@ public class Door : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        transform.position = OpenPos;
+        transform.localPosition = OpenPos;
         IsOpen = true;
 
         ChangeLights();
@@ -31,40 +31,40 @@ public class Door : MonoBehaviour
         {
             if (IsOpen)
             {
-                if (transform.position != OpenPos)
+                if (transform.localPosition != OpenPos)
                 {
-                    if (Vector3.Distance(transform.position, OpenPos) <= 0.5f)
+                    if (Vector3.Distance(transform.localPosition, OpenPos) <= 0.5f)
                     {
-                        transform.position = OpenPos;
+                        transform.localPosition = OpenPos;
                     }
                     else
                     {
-                        transform.position = Vector3.Lerp(transform.position, OpenPos, DoorSpeed * Time.deltaTime);
+                        transform.localPosition = Vector3.Lerp(transform.localPosition, OpenPos, DoorSpeed * Time.deltaTime);
                     }
                 }
             }
             else
             {
-                if (transform.position != ClosePos)
+                if (transform.localPosition != ClosePos)
                 {
-                    if (Vector3.Distance(transform.position, ClosePos) <= 0.5f)
+                    if (Vector3.Distance(transform.localPosition, ClosePos) <= 0.5f)
                     {
-                        transform.position = ClosePos;
+                        transform.localPosition = ClosePos;
                     }
                     else
                     {
-                        transform.position = Vector3.Lerp(transform.position, ClosePos, DoorSpeed * Time.deltaTime);
+                        transform.localPosition = Vector3.Lerp(transform.localPosition, ClosePos, DoorSpeed * Time.deltaTime);
                     }
                 }
-                if (transform.position != ClosePos)
+                if (transform.localPosition != ClosePos)
                 {
-                    if (Vector3.Distance(transform.position, ClosePos) <= 0.5f)
+                    if (Vector3.Distance(transform.localPosition, ClosePos) <= 0.5f)
                     {
-                        transform.position = ClosePos;
+                        transform.localPosition = ClosePos;
                     }
                     else
                     {
-                        transform.position = Vector3.Lerp(transform.position, ClosePos, DoorSpeed * Time.deltaTime);
+                        transform.localPosition = Vector3.Lerp(transform.localPosition, ClosePos, DoorSpeed * Time.deltaTime);
                     }
                 }
             }
@@ -72,15 +72,15 @@ public class Door : MonoBehaviour
         else
         {
 
-            if (transform.position != OpenPos)
+            if (transform.localPosition != OpenPos)
             {
-                if (Vector3.Distance(transform.position, OpenPos) <= 0.5f)
+                if (Vector3.Distance(transform.localPosition, OpenPos) <= 0.5f)
                 {
-                    transform.position = OpenPos;
+                    transform.localPosition = OpenPos;
                 }
                 else
                 {
-                    transform.position = Vector3.Lerp(transform.position, OpenPos, DoorSpeed * Time.deltaTime);
+                    transform.localPosition = Vector3.Lerp(transform.localPosition, OpenPos, DoorSpeed * Time.deltaTime);
                 }
             }
 
