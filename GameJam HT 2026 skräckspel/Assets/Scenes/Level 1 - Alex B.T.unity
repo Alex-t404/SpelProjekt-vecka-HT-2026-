@@ -478,16 +478,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1192571038 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6881448156963713338, guid: b8c5d011eb28f75409cea8fca427f4cf, type: 3}
-  m_PrefabInstance: {fileID: 649058038878326915}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1285996970 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4593017443374551039, guid: 13a989a3b2db15a409097f351290317f, type: 3}
-  m_PrefabInstance: {fileID: 146865728335533063}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1329283881 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7470861467769299154, guid: b8c5d011eb28f75409cea8fca427f4cf, type: 3}
@@ -820,10 +810,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4593017443374551039, guid: 13a989a3b2db15a409097f351290317f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1889937799778462086}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13a989a3b2db15a409097f351290317f, type: 3}
 --- !u!1001 &649058038878326915
 PrefabInstance:
@@ -1333,7 +1320,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4949146827895059724, guid: 13a989a3b2db15a409097f351290317f, type: 3}
   m_PrefabInstance: {fileID: 146865728335533063}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1285996970}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fc2b6fd2ce3266a4686f412e8b8cfad9, type: 3}
@@ -1344,33 +1331,12 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2962246628508931175, guid: 13a989a3b2db15a409097f351290317f, type: 3}
   m_PrefabInstance: {fileID: 146865728335533063}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1285996970}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e36920018b714804eb1458b14e9f08ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1889937799778462086
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1285996970}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ee5f1be1c68d954ca9d7ce6a7a6d433, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxTime: 20
-  currentTime: 0
-  isGameOver: 0
-  timerText: {fileID: 0}
-  jumpscareUI: {fileID: 967817443}
-  loseScreenUI: {fileID: 1192571038}
-  jumpscareDuration: 2
-  audioSource: {fileID: 0}
-  jumpscareSound: {fileID: 8300000, guid: 233ee4197d470364bae86865344160f6, type: 3}
 --- !u!1001 &2288518218238634265
 PrefabInstance:
   m_ObjectHideFlags: 0
